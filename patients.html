@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Pro | Bemorlar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+        <h2>Hospital Pro</h2>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="patients.html">Bemorlar</a>
+        <a href="doctors.html">Shifokorlar</a>
+        <a href="appointments.html">Qabullar</a>
+        <a href="login.html">Chiqish</a>
+    </aside>
+
+    <main class="main-content">
+        <h1>Bemorlarni ro‘yxatga olish</h1>
+
+        <div class="form-box">
+            <input id="patientName" placeholder="Ism">
+            <input id="patientSurname" placeholder="Familiya">
+            <input id="patientPhone" placeholder="Telefon raqami">
+
+            <select id="patientDoctor">
+                <option value="">Shifokorni tanlang</option>
+                <option>Terapevt</option>
+                <option>Jarroh</option>
+                <option>Stomatolog</option>
+            </select>
+
+            <button onclick="addPatient()">Bemorni saqlash</button>
+        </div>
+
+        <h2>Bemorlar ro‘yxati</h2>
+
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ism</th>
+                        <th>Familiya</th>
+                        <th>Telefon</th>
+                        <th>Shifokor</th>
+                    </tr>
+                </thead>
+                <tbody id="patientList"></tbody>
+            </table>
+        </div>
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
